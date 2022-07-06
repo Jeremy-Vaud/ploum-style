@@ -1,0 +1,93 @@
+.nav-bar {
+    @extend .row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: $nav-bar-bg-color;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $nav-bar-height;
+    padding-left: $nav-bar-padding-x;
+    padding-right: $nav-bar-padding-x;
+    box-shadow: $nav-bar-box-shadow;
+}
+
+
+.nav-burger {
+    cursor: pointer;
+    @media (min-width: $nav-bar-breakpoint) {
+        display: none;
+    }
+}
+
+.nav-pannel-close {
+    cursor: pointer;
+}
+
+.nav-pannel {
+    position:absolute;
+    display: none;
+    background-color: $nav-pannel-bg-color;
+    width: $nav-pannel-size;
+    top: 0;
+    padding: $nav-pannel-padding;
+    left: -$nav-pannel-size;
+    transition: $nav-pannel-transition;
+    z-index: 100;
+    height: 100vh;
+    a, span{
+        display: block;
+        background-color: $nav-pannel-link-bg-color;
+        color: $nav-pannel-link-color;
+        padding: $nav-pannel-link-padding;
+        cursor: pointer;
+    }
+    a:hover, span:hover{
+        background-color: $nav-pannel-link-bg-color-hover;
+        color: $nav-pannel-link-color-hover;
+    }
+}
+
+.nav-links {
+    @extend .row;
+    justify-content: space-between;
+    width: $nav-links-size;
+    align-items: center;
+    @media (max-width: $nav-bar-breakpoint) {
+        display: none;
+    }
+    a, span {
+        cursor: pointer;
+    }
+}
+
+.nav-dropdown-pannel {
+    position: absolute;
+    display: none;
+    background-color: $nav-dropdown-pannel-bg-color;
+    width: $nav-dropdown-size;
+    transform: translateY(100%);
+    bottom: 0;
+    >a, >span {
+        display: block;
+        color: $nav-dropdown-pannel-color;
+        padding: $nav-dropdown-link-padding;
+    }
+    >a:hover, >span:hover {
+        background-color: $nav-dropdown-pannel-bg-color-hover;
+        color: $nav-dropdown-pannel-color-hover;
+    }
+}
+
+.nav-pannel-dark-screen {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color: $nav-pannel-dark-screen-bg-color;
+    opacity: $nav-pannel-dark-screen-opacity;
+}

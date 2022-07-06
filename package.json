@@ -1,0 +1,18 @@
+{
+  "name": "ploum-style",
+  "version": "1.0.0",
+  "description": "Framework front-end",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jérémy Vaud",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.52.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}

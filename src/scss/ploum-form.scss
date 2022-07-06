@@ -1,0 +1,81 @@
+input,
+textarea,
+select {
+    border: $input-border-size solid $input-border-color;
+    width: 100%;
+    padding: $input-padding;
+    background-color: $input-bg-color;
+    color: $input-color;
+    border-radius: $input-border-radius;
+}
+
+textarea {
+    resize: none;
+}
+
+.invalid {
+    border: $input-border-size solid $input-invalid-border-color;
+    color: $input-invalid-color;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    display: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    width: auto;
+}
+
+[type="checkbox"]+label,
+[type="radio"]+label {
+    display: flex;
+    align-items: center;
+}
+
+[type="checkbox"]+label::before {
+    content: "";
+    display: block;
+    width: $checkbox-img-width;
+    height: $checkbox-img-height;
+    cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked)+label::before {
+    background: url($checkbox-unchecked-img-url);
+}
+
+
+[type="checkbox"]:checked+label::before {
+    background: url($checkbox-checked-img-url);
+}
+
+[type="radio"]+label::before {
+    content: "";
+    display: block;
+    width: $radio-img-width;
+    height: $radio-img-height;
+    cursor: pointer;
+}
+
+[type="radio"]:not(:checked)+label::before {
+    background: url($radio-unchecked-img-url);
+}
+
+
+[type="radio"]:checked+label::before {
+    background: url($radio-checked-img-url);
+}
+
+fieldset {
+    @extend .d-flex;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url($select-img-url) no-repeat;
+    background-position: 99%;
+}

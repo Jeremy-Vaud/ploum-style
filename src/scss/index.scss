@@ -1,0 +1,173 @@
+/////////////////////////////////
+/// Espacements / Breakpoints ///
+/////////////////////////////////
+
+// Responsive (Différents tailles d'écran)
+$breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+// Espacements (Margin, padding,...)
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 2.25,
+  6: $spacer * 3,
+  auto: auto
+);
+
+@import "ploum-space";
+
+///////////////////////////
+/// Barre de Navigation ///
+///////////////////////////
+
+// Nav-bar (Barre principale)
+$nav-bar-bg-color: white;
+$nav-bar-color: black;
+$nav-bar-height: 50px;
+$nav-bar-padding-x: 50px;
+$nav-bar-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+// Taille d'écran max responsive
+$nav-bar-breakpoint: 768px; 
+
+// Nav-pannel (Menu responsive)
+$nav-pannel-bg-color: white;
+$nav-pannel-padding: 10px 20px;
+$nav-pannel-size: 250px;
+$nav-pannel-transition : .5s;
+
+// Nav-pannel-link (Liens du menu responsive)
+$nav-pannel-link-bg-color: black;
+$nav-pannel-link-bg-color-hover: white;
+$nav-pannel-link-color: white;
+$nav-pannel-link-color-hover: black;
+$nav-pannel-link-padding: 10px;
+
+// Nav-links (Menu desktock)
+$nav-links-size: 500px;
+
+// Nav-dropdown (Menus déroulants)
+$nav-dropdown-pannel-bg-color: black;
+$nav-dropdown-pannel-bg-color-hover: white;
+$nav-dropdown-pannel-color: white;
+$nav-dropdown-pannel-color-hover: black;
+$nav-dropdown-size: 100px;
+$nav-dropdown-link-padding: 10px 5px;
+
+// Nav-pannel-dark-screen (Fond responsive)
+$nav-pannel-dark-screen-bg-color: black;
+$nav-pannel-dark-screen-opacity: .7;
+
+@import "ploum-nav-bar";
+
+////////////////
+/// Couleurs ///
+////////////////
+
+// Couleurs (Pour background,texte,...)
+$colors: (
+    white: white,
+    red: #d86e66,
+    blue: #4f6e85,
+    green: #a7a439, 
+    yellow: #dfad32
+);
+
+@import "ploum-color";
+
+///////////////
+/// Boutons ///
+///////////////
+
+// Boutons (Différents tailles et couleurs)
+$buttons-color: (
+    // Obligatoire: bg, color
+    // Facultatif: bg-hover, color-hover, border-color, border-color-hover
+    green: (bg: map-get($colors , green ), color: white),
+    red: (bg:map-get($colors , red ), color: white),
+    blue: (bg:map-get($colors , blue ), color: white),
+    yellow: (bg:map-get($colors , yellow ), color: white)
+    //yellow: (bg:map-get($colors , yellow ), color: white, border-color: black, bg-hover: black, color-hover: purple, border-color-hover: blue)
+);
+$buttons-size: (
+    // Obligatoire: padding
+    // Facultatif: margin, border, border-radius
+    sm: (padding: 5px 10px, margin: 5px),
+    lg: (padding: 10px 20px, margin: 10px 20px, border: 2px solid, border-radius: 3px)
+);
+
+@import "ploum-button";
+
+/////////////
+/// Modal ///
+/////////////
+
+// Modal
+$modal-bg-color: white;
+$modal-padding: 10px 20px;
+$modal-max-width: 80vw;
+$modal-max-height: 80vh;
+$modal-transition: .5s;
+
+// Modal-dark-screen (Fond)
+$modal-dark-screen-bg-color: black;
+$modal-dark-screen-opacity: .7;
+
+@import "ploum-modal";
+
+//////////////
+/// Loader ///
+//////////////
+
+// Loader-circle
+$loader-color-1: white;
+$loader-color-2: blue;
+$loader-size: 60px;
+$loader-border: 8px;
+$loader-speed: 1s;
+
+// Loader-background
+$loader-background-color: black;
+$loader-background-opacity: .7;
+
+@import "ploum-loader";
+
+////////////
+/// Form ///
+////////////
+
+// Input
+$input-bg-color: white;
+$input-color: black;
+$input-border-color: black;
+$input-border-radius: 10px;
+$input-border-size: 1px;
+$input-padding: 5px 10px;
+$input-invalid-color: red;
+$input-invalid-border-color: red;
+
+// Checkbox
+$checkbox-checked-img-url: '../img/tickBulletPoint.svg';
+$checkbox-unchecked-img-url: '../img/bulletPoint.svg';
+$checkbox-img-width: 24.74px;
+$checkbox-img-height: 24.74px;
+
+// Radio
+$radio-checked-img-url: '../img/tickBulletPoint.svg';
+$radio-unchecked-img-url: '../img/bulletPoint.svg';
+$radio-img-width: 24.74px;
+$radio-img-height: 24.74px;
+
+// Select
+$select-img-url: '../img/down-arrow.png';
+
+@import "ploum-form";

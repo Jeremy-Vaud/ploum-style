@@ -1,0 +1,35 @@
+@each $key-size, $size in $buttons-size {
+    @each $key-color, $color in $buttons-color {
+        .btn-#{$key-size}-#{"" + $key-color} {
+            background-color: map-get($color, bg);
+            padding: map-get($size, padding);
+            color: map-get($color, color);
+            cursor: pointer;
+            @if map-get($size, margin) {
+                margin: map-get($size, margin);
+            }
+            @if map-get($size, border) {
+                border: map-get($size, border);
+                @if map-get($color, border-color) {
+                    border-color: map-get($color, border-color);
+                }
+            }
+            @if map-get($size, border-radius) {
+                border-radius: map-get($size, border-radius);
+            }
+        }
+        .btn-#{$key-size}-#{"" + $key-color}:hover {
+            @if map-get($color, bg-hover) {
+                background-color: map-get($color, bg-hover);
+            }
+            @if map-get($color, color-hover) {
+                color: map-get($color, color-hover);
+            }
+            @if map-get($size, border) {
+                @if map-get($color, border-color-hover) {
+                    border-color: map-get($color, border-color-hover);
+                }
+            }
+        }
+    }
+}

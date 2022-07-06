@@ -1,0 +1,26 @@
+.modal {
+    background-color: $modal-bg-color;
+    padding: $modal-padding;
+    max-width: $modal-max-width;
+    max-height: $modal-max-height;
+    transition: $modal-transition;
+    position: fixed;
+    transform: translate(-50% , -100%);
+    top: 0;
+    left: 50%;
+    z-index: 200;
+}
+
+.modal-dark-screen {
+    background-color: $modal-dark-screen-bg-color;
+    opacity: $modal-dark-screen-opacity;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 199;
+}
+
+

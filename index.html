@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ploum-style</title>
+    <script src="./src/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <span class="nav-burger">burger</span>
+            <span>Nav-bar</span>
+            <div class="nav-pannel">
+                <p class="text-right nav-pannel-close">close</p>
+                <nav>
+                    <span>link</span>
+                    <span>link</span>
+                </nav>
+            </div>
+            <nav class="nav-links">
+                <span>link</span>
+                <div class="nav-dropdown">
+                    <span>drop</span>
+                    <div class="nav-dropdown-pannel">
+                        <span>link</span>
+                    </div>
+                </div>
+                <span>link</span>
+                <div class="nav-dropdown">
+                    <span>drop</span>
+                    <div class="nav-dropdown-pannel">
+                        <span>link</span>
+                    </div>
+                </div>
+            </nav>
+            <nav class="d-md-none">
+                <span>link</span>
+                <span class="ml-3">link</span>
+            </nav>
+        </div>
+    </header>
+    <main class="pt-6 container mx-6">
+        <div class="row">
+            <div class="col-4 col-sm-12">
+                <h2 class="my-3">Boutton</h2>
+                <div class="text-center">
+                    <button class="btn-sm-green">btn-sm-green</button>
+                    <button class="btn-sm-red">btn-sm-red</button>
+                    <button class="btn-sm-yellow">btn-sm-yellow</button>
+                    <button class="btn-sm-blue">btn-sm-blue</button>
+                </div>
+                <div class="text-center">
+                    <button class="btn-lg-green">btn-lg-green</button>
+                    <button class="btn-lg-red">btn-lg-red</button>
+                    <button class="btn-lg-yellow">btn-lg-yellow</button>
+                    <button class="btn-lg-blue">btn-lg-blue</button>
+                </div>
+            </div>      
+            <div class="col-4 col-sm-12">
+                <h2 class="my-3">Texte</h2>
+                <p class="uppercase">upercase</p>
+                <p class="underline">underline</p>
+                <p class="color-red">color-red</p>
+                <p class="color-blue">color-blue</p>
+                <p class="color-yellow">color-yellow</p>
+                <p class="color-green">color-green</p>
+            </div>
+            <div class="col-4 col-sm-12">
+                <h2 class="my-3">Background</h2>
+                <div class="bg-blue p-2 color-white mb-2">bg-blue</div>
+                <div class="bg-yellow p-2 color-white mb-2">bg-yellow</div>
+                <div class="bg-red p-2 color-white mb-2">bg-red</div>
+                <div class="bg-green p-2 color-white mb-2">bg-green</div>
+            </div>     
+        </div>
+        <div>
+            <h2 class="my-3">Colones</h2>
+            <div class="row mb-3">
+                <p class="col-2 bg-red p-2 color-white">col-2</p>
+                <p class="col-4 bg-blue p-2 color-white">col-4</p>
+                <p class="col-6 bg-yellow p-2">col-6</p>
+            </div>
+            <div class="row">
+                <p class="col-sm-12 col-6 bg-green p-2 color-white">col-6 col-sm-12</p>
+                <p class="col-sm-12 col-6 bg-red p-2 color-white">col-6 col-sm-12</p>
+            </div>
+        </div>       
+    <div class="row">
+        <div class="col-4 col-sm-12">
+            <h2 class="my-3">Modal</h2>
+            <button class="btn-lg-green open-modal" data-id-modal="modal-test">modal</button>
+            <div class="modal" id="modal-test">
+                <h3 class="my-3">Modal</h3>
+                <button class="btn-lg-red close-modal">close</button>
+            </div>
+        </div>
+        <div class="col-4 col-sm-12">
+            <h2 class="my-3">Formulaire</h2>
+            <form method="ajax" action="test.php">
+                <label for="input-txt">Text:</label>
+                <input type="text" id="input-txt" class="mb-2"/>
+                <label for="input-nbr">Number:</label>
+                <input type="text" id="input-nbr" class="mb-2"/>
+                <label for="textarea">Textarea:</label>
+                <textarea id="textarea" class="mb-2"></textarea>
+                <label for="select">Select:</label>
+                <select id="select" class="mb-2">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                </select>
+                <div class="mb-2">
+                    <input type="checkbox" id="input-check"/>
+                    <label for="input-check">Checkbox</label>
+                </div>
+                <fieldset class="mb-3">
+                    <legend>Radio:</legend>
+                    <input type="radio" id="radio-1" name="radio"/>
+                    <label for="radio-1" class="mr-3">Radio 1</label>
+                    <input type="radio" id="radio-2" name="radio"/>
+                    <label for="radio-2">Radio 2</label>
+                </fieldset>
+                <div class="text-center">
+                    <button type="submit" class="btn-lg-yellow">Valider</button> 
+                </div>                           
+            </form>       
+        </div>
+    </div>
+    <div id="test">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+    </div>
+    </main>
+</body>
+</html>
