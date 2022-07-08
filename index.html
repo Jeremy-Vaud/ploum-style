@@ -98,25 +98,28 @@
         </div>
         <div class="col-4 col-sm-12">
             <h2 class="my-3">Formulaire</h2>
-            <form method="ajax" action="test.php">
+            <form method="post" action="test.php">
                 <label for="input-txt">Text:</label>
-                <input type="text" id="input-txt" class="mb-2"/>
+                <span class="alert-input ml-2" for="input-txt">Veuillez remplir le champs</span>
+                <input type="text" id="input-txt" class="required mb-2" regex="^[a-zA-ZÀÂÉÊÈËÌÏÎÔÙÛÇÆŒàâéêèëìïîôùûçæœ '-]{3,20}$"/>
                 <label for="input-nbr">Number:</label>
-                <input type="text" id="input-nbr" class="mb-2"/>
+                <span class="alert-input ml-2" for="input-nbr">Veuillez remplir le champs</span>
+                <input type="number" id="input-nbr" class="required mb-2"/>
                 <label for="textarea">Textarea:</label>
-                <textarea id="textarea" class="mb-2"></textarea>
+                <span class="alert-input ml-2" for="textarea">Veuillez remplir le champs</span>
+                <textarea id="textarea" class="required mb-2"></textarea>
                 <label for="select">Select:</label>
                 <select id="select" class="mb-2">
                     <option>Option 1</option>
                     <option>Option 2</option>
                 </select>
                 <div class="mb-2">
-                    <input type="checkbox" id="input-check"/>
-                    <label for="input-check">Checkbox</label>
+                    <input type="checkbox" class="required" id="input-check"/>
+                    <label for="input-check"><span>Checkbox</span><span class="alert-input ml-2" for="input-check">Veuillez cochez cette case</span></label>                    
                 </div>
                 <fieldset class="mb-3">
                     <legend>Radio:</legend>
-                    <input type="radio" id="radio-1" name="radio"/>
+                    <input type="radio" id="radio-1" name="radio" checked/>
                     <label for="radio-1" class="mr-3">Radio 1</label>
                     <input type="radio" id="radio-2" name="radio"/>
                     <label for="radio-2">Radio 2</label>

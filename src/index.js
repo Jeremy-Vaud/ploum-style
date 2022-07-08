@@ -22,3 +22,9 @@ import  {init_breaking_space } from './js/breaking-space'
 $( () => {
     init_breaking_space()
 })
+
+// Form
+import  { init_form } from './js/form'
+$( () => {
+    init_form()
+})

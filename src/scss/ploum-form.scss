@@ -18,6 +18,11 @@ textarea {
     color: $input-invalid-color;
 }
 
+.alert-input {
+    display: none;
+    color: $input-invalid-color;
+}
+
 [type="checkbox"],
 [type="radio"] {
     display: none;
