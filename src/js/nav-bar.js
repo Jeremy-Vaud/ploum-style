@@ -2,8 +2,6 @@
 /// Nav-bar ///
 ///////////////
 
-import $ from 'jquery'
-
 export function init_nav_bar() {
     // Create background
     $(".nav-pannel").after("<div class='nav-pannel-dark-screen'></div>")

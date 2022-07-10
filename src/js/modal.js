@@ -2,8 +2,6 @@
 /// Modal ///
 /////////////
 
-import $ from 'jquery'
-
 export function init_modal () {
     $(".modal").show()
     $(".modal:last-of-type").after("<div class='modal-dark-screen'></div>")
