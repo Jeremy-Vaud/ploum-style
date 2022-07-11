@@ -2,12 +2,12 @@
 /// Modal ///
 /////////////
 
-export function init_modal () {
+export function init_modal() {
     $(".modal").show()
     $(".modal:last-of-type").after("<div class='modal-dark-screen'></div>")
-    $(".modal-close,.modal-dark-screen").on("click",hide_modal)
-    $(".open-modal").on("click",show_modal)
-    $(".close-modal").on("click",hide_modal)
+    $(".modal-close,.modal-dark-screen").on("click", hide_modal)
+    $(".open-modal").on("click", show_modal)
+    $(".close-modal").on("click", hide_modal)
 }
 
 function show_modal() {

@@ -9,16 +9,16 @@ export function init_form() {
     $(".required").on("change", function () {
         check_input($(this))
     })
+    // Ajax button
+    $(".btn-ajax").on("click", ajax_btn_call)
 }
 
-function disable_form_submit () {
+function disable_form_submit() {
+    // Return false on submit and call function to check all required inputs
     let method = $(this).attr("method")
     if (method === "ajax" || method === "post") {
         $(this).on("submit", () => { return false })
         $(this).find("button[type=submit]").on("click", check_form_data)
-    }
-    if(method === "ajax" && $(".loader-background").length == 0) {
-        $("body").append("<div class='loader'><div class='loader-background'><div class='loader-circle'></div></div></div>")
     }
 }
 
@@ -72,31 +72,60 @@ function check_input(input) {
 }
 
 function submit_ajax_form(form) {
+    // Prepare ajax call when form is submit
+    init_loader()
     let data = new FormData(form[0])
-    data.append("action",form.attr("data-action"))
-    $.ajax(ajaxUrl, {
-            method: "post",
-            data: data,
-            processData: false,
-            contentType: false,
-            dataType: "json",
-            beforeSend: () => {$(".loader").show()},
-            complete: () => {$(".loader").hide()},
-            success: successAjax.bind(form),
-            error: errorAjax.bind(form)           
-        })
+    data.append("action", form.attr("data-action"))
+    ajax_call(form, data)
 }
 
-function successAjax (data) {
+function ajax_btn_call() {
+    // Prepare ajax call when click on a button
+    init_loader()
+    let data = new FormData
+    $.each(this.attributes,function() {
+        if(this.name.startsWith('data-')) {
+            data.append(this.name.substring(5), this.value)
+        }
+    })
+    ajax_call($(this), data)
+}
+
+function ajax_call(elt, data) {
+    // Send ajax call
+    $.ajax(ajaxUrl, {
+        method: "post",
+        data: data,
+        processData: false,
+        contentType: false,
+        dataType: "json",
+        beforeSend: () => { $(".loader").show() },
+        complete: () => { $(".loader").hide() },
+        success: successAjax.bind(elt),
+        error: errorAjax.bind(elt)
+    })
+}
+
+function init_loader() {
+    // Loader for ajax call
+    if ($(".loader-background").length == 0) {
+        $("body").append("<div class='loader'><div class='loader-background'><div class='loader-circle'></div></div></div>")
+    }
+}
+
+
+function successAjax(data) {
+    // Ajax call success
     let success = this.attr('success')
-    if( success !== undefined ) {
+    if (success !== undefined) {
         window[success](data)
     }
 }
 
-function errorAjax () {
+function errorAjax() {
+    // Ajax call error
     let error = this.attr('error')
-    if( error !== undefined ) {
+    if (error !== undefined) {
         window[error]()
     }
 }

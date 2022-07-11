@@ -8,14 +8,14 @@ export function init_nav_bar() {
     // Show pannel
     $(".nav-pannel").show()
     // Event
-    $(".nav-burger").on("click",open_nav_pannel)
-    $(".nav-pannel-close,.nav-pannel-dark-screen").on("click",close_nav_pannel)
-    $(".nav-dropdown").on("click",click_nav_dropdown)
+    $(".nav-burger").on("click", open_nav_pannel)
+    $(".nav-pannel-close,.nav-pannel-dark-screen").on("click", close_nav_pannel)
+    $(".nav-dropdown").on("click", click_nav_dropdown)
     // Resize
-    $(window).on("resize",close_nav_pannel)
-    $(window).on("resize",() => { $(".nav-dropdown-pannel").hide() })
+    $(window).on("resize", close_nav_pannel)
+    $(window).on("resize", () => { $(".nav-dropdown-pannel").hide() })
     // Click outside
-    $(document).on("click",(event) => {
+    $(document).on("click", (event) => {
         if (!$(event.target).closest('.nav-dropdown').length) {
             $(".nav-dropdown-pannel").hide()
         }
