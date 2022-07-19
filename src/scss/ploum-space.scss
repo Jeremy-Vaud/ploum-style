@@ -75,48 +75,6 @@ $directions: x, y;
 .hide-scroll-bar::-webkit-scrollbar {
     display: none;
 }
-//////////////////////////////////////////////////////
-
-
-/*#test {
-    position: relative;
-    width: 600px;
-    height: 100px;
-    overflow: hidden;
-}*/
-
-
-/*.overflow-y-scroll {
-    position: relative;
-    width: 600px;
-    height: 400px;
-}*/
-
-/*.overflow-y-scroll::before {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 100vh;
-    background-color: cadetblue;
-    position: absolute;
-    top: 0;
-    right:0;
-}
-
-.overflow-y-scroll::after {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 1vh;
-    background-color: red;
-    position: absolute;
-    top: 0;
-    right:0;
-}*/
-
-
-
-//////////////////////////////////////////////////////
 
 // Textes
 $positions: left, center, right;
@@ -150,7 +108,6 @@ $positions: left, center, right;
 
 
 // Spacing
-
 
 @each $i, $spacing in $spacers {
     // Padding
