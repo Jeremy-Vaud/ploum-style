@@ -1,0 +1,36 @@
+.caroussel {
+    position: relative;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        display: none;
+        transition: $caroussel-img-transition;
+    }
+    img:first-of-type {
+        display: block;
+    }
+}
+
+.arrow-left-caroussel, .arrow-right-caroussel {
+    width: $arrow-caroussel-width;
+    height: $arrow-caroussel-height;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow-left-caroussel {
+    background-image: url($arrow-left-caroussel-file);
+    left: $arrow-caroussel-position;
+}
+
+.arrow-right-caroussel {
+    background-image: url($arrow-right-caroussel-file);
+    right: $arrow-caroussel-position;
+}

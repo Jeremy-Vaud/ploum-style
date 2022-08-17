@@ -75,6 +75,19 @@ Modal :
 </div>
 ```
 
+### Caroussel
+
+To use the carousel class, you must assign it a height value.
+If you want auto scroll use auto attribute with value in milliseconds.
+
+```
+<div class="caroussel" style="height: 300px" auto="2000">
+    <img src="image-1" alt="image">
+    <img src="image-2" alt="image">
+    <img src="image-3" alt="image">
+</div>
+```
+
 ### Form
 
 You can use required inputs with regex in your forms

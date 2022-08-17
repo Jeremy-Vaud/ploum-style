@@ -7,6 +7,7 @@
     <title>Ploum-style</title>
     <script src="./src/index.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="nav-bar">
@@ -57,7 +58,7 @@
                     <button class="btn-lg-yellow">btn-lg-yellow</button>
                     <button class="btn-lg-blue">btn-lg-blue</button>
                 </div>
-            </div>      
+            </div>
             <div class="col-4 col-sm-12">
                 <h2 class="my-3">Texte</h2>
                 <p class="uppercase">upercase</p>
@@ -73,7 +74,7 @@
                 <div class="bg-yellow p-2 color-white mb-2">bg-yellow</div>
                 <div class="bg-red p-2 color-white mb-2">bg-red</div>
                 <div class="bg-green p-2 color-white mb-2">bg-green</div>
-            </div>     
+            </div>
         </div>
         <div>
             <h2 class="my-3">Colones</h2>
@@ -86,71 +87,93 @@
                 <p class="col-sm-12 col-6 bg-green p-2 color-white">col-6 col-sm-12</p>
                 <p class="col-sm-12 col-6 bg-red p-2 color-white">col-6 col-sm-12</p>
             </div>
-        </div>       
-    <div class="row">
-        <div class="col-4 col-sm-12">
-            <h2 class="my-3">Modal</h2>
-            <button class="btn-lg-green open-modal" data-id-modal="modal-test">modal</button>
-            <div class="modal" id="modal-test">
-                <h3 class="my-3">Modal</h3>
-                <button class="btn-lg-red close-modal">close</button>
+        </div>
+        <div class="row">
+            <div class="col-4 col-sm-12">
+                <h2 class="my-3">Modal</h2>
+                <button class="btn-lg-green open-modal" data-id-modal="modal-test">modal</button>
+                <div class="modal" id="modal-test">
+                    <h3 class="my-3">Modal</h3>
+                    <button class="btn-lg-red close-modal">close</button>
+                </div>
+                <h2 class="my-3">Boutton ajax</h2>
+                <button class="btn-lg-blue btn-ajax" data-action="delete" data-id="5" success="test_success"
+                    error="test_error">Ajax</button>
             </div>
-            <h2 class="my-3">Boutton ajax</h2>
-            <button class="btn-lg-blue btn-ajax" data-action="delete" data-id="5" success="test_success" error="test_error">Ajax</button>
+            <div class="col-4 col-sm-12 px-4">
+                <h2 class="my-3">Formulaire</h2>
+                <form method="post" action="test.php">
+                    <label for="input-txt">Text:</label>
+                    <span class="alert-input ml-2" for="input-txt">Veuillez remplir le champs</span>
+                    <input type="text" id="input-txt" class="required mb-2"
+                        regex="^[a-zA-ZÀÂÉÊÈËÌÏÎÔÙÛÇÆŒàâéêèëìïîôùûçæœ '-]{3,20}$" />
+                    <label for="input-nbr">Number:</label>
+                    <span class="alert-input ml-2" for="input-nbr">Veuillez remplir le champs</span>
+                    <input type="number" id="input-nbr" class="required mb-2" />
+                    <label for="textarea">Textarea:</label>
+                    <span class="alert-input ml-2" for="textarea">Veuillez remplir le champs</span>
+                    <textarea id="textarea" class="required mb-2"></textarea>
+                    <label for="select">Select:</label>
+                    <select id="select" class="mb-2">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                    <div class="mb-2">
+                        <input type="checkbox" class="required" id="input-check" />
+                        <label for="input-check"><span>Checkbox</span><span class="alert-input ml-2"
+                                for="input-check">Veuillez cochez cette case</span></label>
+                    </div>
+                    <fieldset class="mb-3">
+                        <legend>Radio:</legend>
+                        <input type="radio" id="radio-1" name="radio" checked />
+                        <label for="radio-1" class="mr-3">Radio 1</label>
+                        <input type="radio" id="radio-2" name="radio" />
+                        <label for="radio-2">Radio 2</label>
+                    </fieldset>
+                    <div class="text-center">
+                        <button type="submit" class="btn-lg-yellow">Valider</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4 col-sm-12 px-4">
+                <form method="ajax" data-action="submit_ajax_form" error="test_error" success="test_success">
+                    <h2 class="my-3">Formulaire ajax</h2>
+                    <label for="ajax-txt">Text:</label>
+                    <span for="ajax-txt" class="alert-input ml-2">Veuillez remplir le champs</span>
+                    <input type="text" id="ajax-txt" name='ajax-txt' class="required" />
+                    <div class="text-center">
+                        <button type="submit" class="btn-lg-green">Valider</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="col-4 col-sm-12 px-4">
-            <h2 class="my-3">Formulaire</h2>
-            <form method="post" action="test.php">
-                <label for="input-txt">Text:</label>
-                <span class="alert-input ml-2" for="input-txt">Veuillez remplir le champs</span>
-                <input type="text" id="input-txt" class="required mb-2" regex="^[a-zA-ZÀÂÉÊÈËÌÏÎÔÙÛÇÆŒàâéêèëìïîôùûçæœ '-]{3,20}$"/>
-                <label for="input-nbr">Number:</label>
-                <span class="alert-input ml-2" for="input-nbr">Veuillez remplir le champs</span>
-                <input type="number" id="input-nbr" class="required mb-2"/>
-                <label for="textarea">Textarea:</label>
-                <span class="alert-input ml-2" for="textarea">Veuillez remplir le champs</span>
-                <textarea id="textarea" class="required mb-2"></textarea>
-                <label for="select">Select:</label>
-                <select id="select" class="mb-2">
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                </select>
-                <div class="mb-2">
-                    <input type="checkbox" class="required" id="input-check"/>
-                    <label for="input-check"><span>Checkbox</span><span class="alert-input ml-2" for="input-check">Veuillez cochez cette case</span></label>                    
+        <script>
+            function test_error() {
+                console.log("error")
+            }
+            function test_success(data) {
+                console.log(data)
+            }
+        </script>
+        <div class="row mb-3">
+            <div class="col-6 pr-2">
+                <h2 class="my-3">Carroussel</h2>
+                <div class="caroussel" style="height: 300px;">
+                    <img src="" alt="image" class="bg-green">
+                    <img src="" alt="image" class="bg-red">
+                    <img src="" alt="image" class="bg-blue">
                 </div>
-                <fieldset class="mb-3">
-                    <legend>Radio:</legend>
-                    <input type="radio" id="radio-1" name="radio" checked/>
-                    <label for="radio-1" class="mr-3">Radio 1</label>
-                    <input type="radio" id="radio-2" name="radio"/>
-                    <label for="radio-2">Radio 2</label>
-                </fieldset>
-                <div class="text-center">
-                    <button type="submit" class="btn-lg-yellow">Valider</button> 
-                </div>                           
-            </form>       
-        </div>
-        <div class="col-4 col-sm-12 px-4">
-            <form method="ajax" data-action="submit_ajax_form" error="test_error" success="test_success">
-                <h2 class="my-3">Formulaire ajax</h2>
-                <label for="ajax-txt">Text:</label>
-                <span for="ajax-txt" class="alert-input ml-2" >Veuillez remplir le champs</span>
-                <input type="text" id="ajax-txt" name='ajax-txt' class="required"/>
-                <div class="text-center">
-                    <button type="submit" class="btn-lg-green">Valider</button>
+            </div>
+            <div class="col-6 pl-2">
+                <h2 class="my-3">Carroussel auto</h2>
+                <div class="caroussel" style="height: 300px;" auto="2000">
+                    <img src="" alt="image" class="bg-green">
+                    <img src="" alt="image" class="bg-red">
+                    <img src="" alt="image" class="bg-blue">
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
-    <script>
-        function test_error () {
-            console.log("error")
-        }
-        function test_success (data) {
-            console.log(data)
-        }
-    </script>
     </main>
 </body>
+
 </html>

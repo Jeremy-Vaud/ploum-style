@@ -29,3 +29,9 @@ global.ajaxUrl = "https://example.com/ajax.php"
 $(() => {
     init_form()
 })
+
+// Caroussel
+import { init_caroussel } from './js/caroussel'
+$(() => {
+    init_caroussel()
+})

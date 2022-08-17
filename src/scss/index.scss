@@ -171,3 +171,19 @@ $radio-img-height: 24.74px;
 $select-img-url: '../img/down-arrow.png';
 
 @import "ploum-form";
+
+//////////////////
+/// Caroussel ///
+//////////////////
+
+// Caroussel
+$caroussel-img-transition: .5s;
+
+// Arrow
+$arrow-left-caroussel-file: '../img/arrow-left.svg';
+$arrow-right-caroussel-file: '../img/arrow-right.svg';
+$arrow-caroussel-width: 40px;
+$arrow-caroussel-height: 40px;
+$arrow-caroussel-position: 20px;
+
+@import "ploum-caroussel";
