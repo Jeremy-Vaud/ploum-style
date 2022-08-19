@@ -13,14 +13,14 @@ $breakpoints: (
 // Espacements (Margin, padding,...)
 $spacer: 1rem;
 $spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 2.25,
-  6: $spacer * 3,
-  auto: auto
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 2.25,
+    6: $spacer * 3,
+    auto: auto
 );
 
 @import "ploum-space";
@@ -37,7 +37,7 @@ $nav-bar-padding-x: 50px;
 $nav-bar-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
 // Taille d'écran max responsive
-$nav-bar-breakpoint: 768px; 
+$nav-bar-breakpoint: 768px;
 
 // Nav-pannel (Menu responsive)
 $nav-pannel-bg-color: white;
@@ -78,7 +78,7 @@ $colors: (
     white: white,
     red: #d86e66,
     blue: #4f6e85,
-    green: #a7a439, 
+    green: #a7a439,
     yellow: #dfad32
 );
 
@@ -92,11 +92,10 @@ $colors: (
 $buttons-color: (
     // Obligatoire: bg, color
     // Facultatif: bg-hover, color-hover, border-color, border-color-hover
-    green: (bg: map-get($colors , green ), color: white),
-    red: (bg:map-get($colors , red ), color: white),
-    blue: (bg:map-get($colors , blue ), color: white),
-    yellow: (bg:map-get($colors , yellow ), color: white)
-    //yellow: (bg:map-get($colors , yellow ), color: white, border-color: black, bg-hover: black, color-hover: purple, border-color-hover: blue)
+    green: (bg: map-get($colors , green), color: white),
+    red: (bg:map-get($colors , red), color: white),
+    blue: (bg:map-get($colors , blue), color: white),
+    yellow: (bg:map-get($colors , yellow), color: white) //yellow: (bg:map-get($colors , yellow ), color: white, border-color: black, bg-hover: black, color-hover: purple, border-color-hover: blue)
 );
 $buttons-size: (
     // Obligatoire: padding
@@ -187,3 +186,14 @@ $arrow-caroussel-height: 40px;
 $arrow-caroussel-position: 20px;
 
 @import "ploum-caroussel";
+
+/////////////////
+/// Accordion ///
+/////////////////
+
+// Body
+$accordion-transition: .3s;
+$accordion-max-height: 500px;
+$accordion-icon: '../img/down-arrow.png';
+
+@import "ploum-accordion";

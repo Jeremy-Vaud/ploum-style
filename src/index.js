@@ -35,3 +35,9 @@ import { init_caroussel } from './js/caroussel'
 $(() => {
     init_caroussel()
 })
+
+// Accordion
+import { init_accordion } from './js/accordion'
+$(() => {
+    init_accordion()
+})

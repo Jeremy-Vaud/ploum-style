@@ -1,0 +1,32 @@
+.accordion-close {
+    .accordion-title::after {
+        transform: rotate(180deg);
+    }
+
+    .accordion-content {
+        max-height: 0px;
+    }
+}
+
+.accordion-open {
+    .accordion-content {
+        max-height: $accordion-max-height;
+    }
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordion-title::after {
+    content: url($accordion-icon);
+    transition: $accordion-transition;
+}
+
+.accordion-content {
+    overflow: hidden;
+    transition: $accordion-transition;
+}
