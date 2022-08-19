@@ -87,6 +87,18 @@ If you want auto scroll use auto attribute with value in milliseconds.
     <img src="image-3" alt="image">
 </div>
 ```
+### Accordion
+
+Use class 'accordion-open' or 'accordion-close' to start with an open or close accordion :
+
+```
+<div class="accordion-open">
+    <h3 class="accordion-title">Open accordion</h3>
+    <div class="accordion-content">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+</div>
+```
 
 ### Form
 
