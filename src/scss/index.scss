@@ -112,6 +112,20 @@ $buttons-size: (
 
 @import "ploum-button";
 
+////////////
+/// Tabs ///
+////////////
+
+$tabs-border-sise: 1px; 
+$tabs-border-color: grey;
+$tabs-border-radius: 5px 5px 0 0;
+$tabs-nav-padding: 5px 15px;
+$tabs-nav-bg-color: white;
+$tabs-active-color: map-get($colors, blue);
+
+
+@import "ploum-tabs";
+
 /////////////
 /// Modal ///
 /////////////

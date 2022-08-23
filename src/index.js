@@ -41,3 +41,9 @@ import { init_accordion } from './js/accordion'
 $(() => {
     init_accordion()
 })
+
+// Tabs
+import { init_tabs } from './js/tabs'
+$(() => {
+    init_tabs()
+})
