@@ -1,18 +1,21 @@
 .tabs {
     border-bottom: $tabs-border-sise solid $tabs-border-color;
     margin-bottom: 20px;
+
     li {
         background-color: $tabs-nav-bg-color;
         display: inline-block;
         padding: $tabs-nav-padding;
         cursor: pointer;
     }
+
     .tabs-active {
         color: $tabs-active-color;
         position: relative;
         cursor: default;
     }
-    .tabs-active::after{
+
+    .tabs-active::after {
         content: "";
         position: absolute;
         width: 100%;
