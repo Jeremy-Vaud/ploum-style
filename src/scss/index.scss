@@ -82,13 +82,24 @@ $colors: (
     yellow: #dfad32
 );
 
-// Tags
-$tags-padding: 2px 15px;
-$tags-margin: 5px 5px 0 0;
-$tags-border-radius: 3px;
-
-
 @import "ploum-color";
+
+////////////
+/// Tags ///
+////////////
+
+// Medium
+$tag-padding: 2px 15px;
+$tag-margin: 5px 5px 0 0;
+$tag-border-radius: 3px;
+
+// Large
+$tag-lg-padding: 5px 20px;
+$tag-lg-margin: 10px 10px 0 0;
+$tag-lg-border-radius: 5px;
+
+@import "ploum-tag";
+
 
 ///////////////
 /// Boutons ///

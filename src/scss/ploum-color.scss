@@ -7,12 +7,4 @@ $color in $colors {
     .bg-#{"" + $key} {
         background-color: $color;
     }
-
-    .tag-#{"" + $key} {
-        display: inline-block;
-        background-color: $color;
-        padding: $tags-padding;
-        margin: $tags-margin;
-        border-radius: $tags-border-radius;
-    }
 }
