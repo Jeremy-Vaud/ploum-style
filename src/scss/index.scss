@@ -75,12 +75,18 @@ $nav-pannel-dark-screen-opacity: .7;
 
 // Couleurs (Pour background,texte,...)
 $colors: (
-    white: white,
-    red: #d86e66,
-    blue: #4f6e85,
-    green: #a7a439,
-    yellow: #dfad32
+    black: (color: black, text: white),
+    white: (color: white, text: black),
+    red: (color: #d86e66, text: white),
+    blue:(color: #4f6e85, text: white),
+    green:(color: #a7a439, text: white),
+    yellow:(color: #dfad32, text: black)
 );
+
+@function color($color) {
+    // to use a color from $colors
+    @return map-get(map-get($colors, $color),color)
+}
 
 @import "ploum-color";
 
@@ -100,7 +106,6 @@ $tag-lg-border-radius: 5px;
 
 @import "ploum-tag";
 
-
 ///////////////
 /// Boutons ///
 ///////////////
@@ -109,10 +114,10 @@ $tag-lg-border-radius: 5px;
 $buttons-color: (
     // Obligatoire: bg, color
     // Facultatif: bg-hover, color-hover, border-color, border-color-hover
-    green: (bg: map-get($colors , green), color: white),
-    red: (bg:map-get($colors , red), color: white),
-    blue: (bg:map-get($colors , blue), color: white),
-    yellow: (bg:map-get($colors , yellow), color: white) //yellow: (bg:map-get($colors , yellow ), color: white, border-color: black, bg-hover: black, color-hover: purple, border-color-hover: blue)
+    green: (bg: color(green), color: color(white)),
+    red: (bg:color(red), color: color(white)),
+    blue: (bg:color(blue), color: color(white)),
+    yellow: (bg:color(yellow), color: color(black)) //yellow: (bg:map-get($colors , yellow ), color: white, border-color: black, bg-hover: black, color-hover: purple, border-color-hover: blue)
 );
 $buttons-size: (
     // Obligatoire: padding
@@ -127,12 +132,12 @@ $buttons-size: (
 /// Tabs ///
 ////////////
 
-$tabs-border-sise: 1px; 
+$tabs-border-sise: 1px;
 $tabs-border-color: grey;
 $tabs-border-radius: 5px 5px 0 0;
 $tabs-nav-padding: 5px 15px;
-$tabs-nav-bg-color: white;
-$tabs-active-color: map-get($colors, blue);
+$tabs-nav-bg-color: color(white);
+$tabs-active-color: color(blue);
 
 
 @import "ploum-tabs";
@@ -142,7 +147,7 @@ $tabs-active-color: map-get($colors, blue);
 /////////////
 
 // Modal
-$modal-bg-color: white;
+$modal-bg-color: color(white);
 $modal-padding: 10px 20px;
 $modal-max-width: 80vw;
 $modal-max-height: 80vh;
@@ -159,8 +164,8 @@ $modal-dark-screen-opacity: .7;
 //////////////
 
 // Loader-circle
-$loader-color-1: white;
-$loader-color-2: blue;
+$loader-color-1: color(white);
+$loader-color-2: color(blue);
 $loader-size: 60px;
 $loader-border: 8px;
 $loader-speed: 1s;
@@ -176,14 +181,14 @@ $loader-background-opacity: .7;
 ////////////
 
 // Input
-$input-bg-color: white;
-$input-color: black;
+$input-bg-color: color(white);
+$input-color: color(black);
 $input-border-color: black;
 $input-border-radius: 10px;
 $input-border-size: 1px;
 $input-padding: 5px 10px;
-$input-invalid-color: red;
-$input-invalid-border-color: red;
+$input-invalid-color: color(red);
+$input-invalid-border-color: color(red);
 
 // Checkbox
 $checkbox-checked-img-url: '../img/tickBulletPoint.svg';

@@ -1,16 +1,20 @@
 @each $key,
 $color in $colors {
-    .tag-#{"" + $key} {
+
+    .tag-#{"" + $key},
+    .tag-lg-#{"" + $key} {
         display: inline-block;
-        background-color: $color;
+        background-color: map-get($color, color);
+        color: map-get($color, text);
+    }
+
+    .tag-#{"" + $key} {
         padding: $tag-padding;
         margin: $tag-margin;
         border-radius: $tag-border-radius;
     }
 
     .tag-lg-#{"" + $key} {
-        display: inline-block;
-        background-color: $color;
         padding: $tag-lg-padding;
         margin: $tag-lg-margin;
         border-radius: $tag-lg-border-radius;
