@@ -69,22 +69,24 @@ $nav-pannel-dark-screen-opacity: .7;
 
 @import "ploum-nav-bar";
 
-////////////////
-/// Couleurs ///
-////////////////
+//////////////
+/// Colors ///
+//////////////
 
-// Couleurs (Pour background,texte,...)
+// All colors
 $colors: (
-    black: (color: black, text: white),
-    white: (color: white, text: black),
-    red: (color: #d86e66, text: white),
-    blue:(color: #4f6e85, text: white),
-    green:(color: #a7a439, text: white),
-    yellow:(color: #dfad32, text: black)
+    // Use text to define text color for buttons and tags
+    // hover and text-hover are only use for buttons
+    black: (color: #0c1521),
+    white: (color: #F8F5F2),
+    red: (color: #d86e66, text: #F8F5F2, hover: #eec8c4, text-hover: #F8F5F2),
+    blue:(color: #4f6e85, text: #F8F5F2, hover: #c0c8ce, text-hover: #F8F5F2),
+    green:(color: #a7a439, text: #F8F5F2, hover: #dedbb5, text-hover: #F8F5F2),
+    yellow:(color: #dfad32, text: #0c1521, hover: #f0deb2, text-hover: #0c1521)
 );
 
 @function color($color) {
-    // to use a color from $colors
+    // To use a color from $colors
     @return map-get(map-get($colors, $color),color)
 }
 
@@ -107,23 +109,15 @@ $tag-lg-border-radius: 5px;
 @import "ploum-tag";
 
 ///////////////
-/// Boutons ///
+/// Buttons ///
 ///////////////
 
-// Boutons (Différents tailles et couleurs)
-$buttons-color: (
-    // Obligatoire: bg, color
-    // Facultatif: bg-hover, color-hover, border-color, border-color-hover
-    green: (bg: color(green), color: color(white)),
-    red: (bg:color(red), color: color(white)),
-    blue: (bg:color(blue), color: color(white)),
-    yellow: (bg:color(yellow), color: color(black)) //yellow: (bg:map-get($colors , yellow ), color: white, border-color: black, bg-hover: black, color-hover: purple, border-color-hover: blue)
-);
+$buttons-transition: .5s;
 $buttons-size: (
-    // Obligatoire: padding
-    // Facultatif: margin, border, border-radius
+    // For all size define padding and margin
+    // border-radius is optional
     sm: (padding: 5px 10px, margin: 5px),
-    lg: (padding: 10px 20px, margin: 10px 20px, border: 2px solid, border-radius: 3px)
+    lg: (padding: 10px 20px, margin: 10px 20px, border-radius: 5px)
 );
 
 @import "ploum-button";
@@ -138,7 +132,6 @@ $tabs-border-radius: 5px 5px 0 0;
 $tabs-nav-padding: 5px 15px;
 $tabs-nav-bg-color: color(white);
 $tabs-active-color: color(blue);
-
 
 @import "ploum-tabs";
 
