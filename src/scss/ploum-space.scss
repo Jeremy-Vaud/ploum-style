@@ -82,6 +82,13 @@ $positions: left, center, right;
     .text-#{$position} {
         text-align: $position;
     }
+    @each $key, $breakpoint in $breakpoints {
+        @media (max-width: $breakpoint) {
+            .text-#{$key}-#{$position} {
+                text-align: $position;
+            }
+        }
+    }
 }
 
 .uppercase {
