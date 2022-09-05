@@ -42,9 +42,28 @@ $displays: flex, block, inline, inline-block, none;
     align-items: center;
 }
 
+// Container
+
 .container {
-    max-width: 1200px;
     margin: auto;
+    @media (max-width: 576px){
+        max-width: $container-xs;
+    }
+    @media (min-width: 577px) and (max-width: 768px){
+        max-width: $container-s;
+    }
+    @media (min-width: 769px) and (max-width: 992px){
+        max-width: $container-m;
+    }
+    @media (min-width: 993px) and (max-width: 1200px){
+        max-width: $container-l;
+    }
+    @media (min-width: 1201px) and (max-width: 1400px){
+        max-width: $container-xl;
+    }
+    @media (min-width: 1401px){
+        max-width: $container-xxl;
+    }
 }
 
 // Overflow

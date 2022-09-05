@@ -23,6 +23,14 @@ $spacers: (
     auto: auto
 );
 
+// Container
+$container-xs: 100%; // <576px
+$container-s: 540px; // >=576px
+$container-m: 720px; // >=768px
+$container-l: 960px; // >=992px
+$container-xl: 1140px; // >=1200px
+$container-xxl: 1320px; // >=1400px
+
 @import "ploum-space";
 
 ///////////////////////////
