@@ -42,6 +42,15 @@ $displays: flex, block, inline, inline-block, none;
     align-items: center;
 }
 
+@each $val in 25,50,75,100 {
+    .vw-#{$val} {
+        width: #{$val}vw;
+    }
+    .vh-#{$val} {
+        height: #{$val}vh;
+    }
+} 
+
 // Container
 
 .container {
